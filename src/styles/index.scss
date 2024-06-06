@@ -1,23 +1,21 @@
-
-@import '@unocss/reset/tailwind.css' layer(tailwind-reset);
+@import "@unocss/reset/tailwind.css" layer(tailwind-reset);
 /* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
-@import "./primereact-sass-theme/themes/lara/lara-light/indigo/theme.scss" layer(primereact);
+@import "./primereact-sass-theme/themes/lara/lara-light/indigo/theme.scss"
+  layer(primereact);
 
-@import '@fontsource-variable/red-hat-display';
-
+@import "@fontsource-variable/red-hat-display";
 
 html {
   scroll-behavior: smooth;
-  font-size:14px;
+  font-size: 14px;
 }
 * {
-  font-family: 'Red Hat Display Variable', sans-serif;
+  font-family: "Red Hat Display Variable", sans-serif;
 }
 
 body {
   width: 100vw;
   position: relative;
   overflow-x: hidden;
-  background-color:#f9f9fa ;
+  background-color: #f9f9fa;
 }
-

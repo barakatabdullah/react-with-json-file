@@ -14,10 +14,8 @@ import { queryClient } from "./config/queryClient";
 import { Routes } from "@generouted/react-router";
 
 export function Fallback() {
-  return <p>Performing initial data load</p>;
+  return <p>Performing initial daReactDOM.createR</p>;
 }
-
-
 
 ReactDOM.createRoot(document.getElementById("root") as Element).render(
   <React.StrictMode>
@@ -27,5 +25,5 @@ ReactDOM.createRoot(document.getElementById("root") as Element).render(
         <Routes />
       </QueryClientProvider>
     </PrimeReactProvider>
-  </React.StrictMode>
+  </React.StrictMode>,
 );
