@@ -1,9 +1,11 @@
-import { DataView } from "primereact/dataview";
 import { getCars } from "./_utils";
 import { keepPreviousData, useQuery } from "@tanstack/react-query";
 import { ItemTemplate } from "./_components/ItemsTemplate";
 import { Button } from "primereact/button";
 import { useNavigate } from "react-router-dom";
+import { Card } from "primereact/card";
+import SocialWedgits from "./_components/SocialWedgits";
+import { DataView } from "primereact/dataview";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -17,40 +19,70 @@ export default function Home() {
   console.log(data);
 
   return (
-    <div className=" flex flex-col gap-4 p-6">
-      <div className="rounded-3 overflow-hidden relative">
-        <img src="/photos/hero.png" alt="hero" />
-        <div className="absolute top-0 left-0 right-0 bottom-0 grid grid-cols-2 items-center">
-          <div className="flex flex-col gap-2 text-white text-14 font-bold p-8">
-            <h1>Welcome to Json Store</h1>
-            <h2>Find your next favorite Car</h2>
-          </div>
-        </div>
-      </div>
-      <div className="flex items-center justify-between">
-        <h2 className="my-8 text-5 font-bold">Cars</h2>
-        <Button
-          label="Add Car"
-          onClick={() => {
-            navigate("/car/add");
-          }}
-          icon="i-tabler-plus"
-        />
+    <div className=" flex flex-col gap-4 p-12">
+      <div className="flex justify-between w-full items-center h-40">
+        <h2 className="text-7 text-white font-bold">Welcome to Acara Store</h2>
       </div>
 
+      <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-4">
+        <div className="col-span-1">
+
+          <Card className="shadow-none border">
+            <div className="flex flex-col gap-6 items-center justify-center">
+
+              <h4 className="text-6 text-center  z-2 font-bold">
+              Ready to hit the road <br/>
+              <span className="text-#4338ca">in something new?</span>
+              </h4>
+            <div className="py-10">
+              <img src="/photos/messenger.svg" alt="" />
+            </div>
+
+            <div className="flex gap-4">
+              <Button
+                text
+                label="Browse cars"
+                onClick={() => navigate("/cars")}
+              />
+                            <Button
+                
+                label="Contact us"
+
+              />
+            </div>
+            </div>
+          </Card>
+        </div>
+
+
+        <div className="col-span-2 flex flex-col gap-4">
+        <SocialWedgits/>
+
+          <div className="col-span-4 flex items-center h-full w-full h-60 bg-#4338ca rounded-4 p-6 relative">
+            <h4 className="text-8 text-start text-white font-bold max-sm:text-6">Your journey<br/>starts here.</h4>
+            <div className="absolute rhight-0 ms-auto w-full">
+              <img className="w-7/10 ms-auto" src="/photos/MC20.png" alt="hero" />
+            </div>
+          </div>
+
+        </div>
+
+
+      </div>
+
+
       <div>
-        <DataView
+      <DataView
           value={data}
           loading={isLoading}
           layout="grid"
           pt={{
             root: { className: "rounded-6 overflow-hidden" },
             content: { className: "p2 bg-transparent" },
-            grid: { className: "grid grid-cols-4 gap-4" },
+            grid: { className: "grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1" },
           }}
           itemTemplate={ItemTemplate}
-          paginator
-          rows={10}
+          rows={4}
         />
       </div>
     </div>

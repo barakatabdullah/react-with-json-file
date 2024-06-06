@@ -15,7 +15,7 @@ const menuItems = [
     {
       label: "Cars",
       icon: "i-tabler-car",
-      page: "/",
+      page: "/cars",
     },
     {
       label: "Bookmarks",

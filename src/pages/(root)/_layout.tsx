@@ -4,14 +4,17 @@ import NavBar from "../../components/NavBar";
 
 export default function Layout() {
   return (
-    <div className=" min-h-screen flex max-lg:flex-col ">
-      <div>
-      <NavBar />
-        <SideBar />
+    <>
+      <div className="absolute h-68 w-screen top-0  bg-#18125c -z-2" />
+      <div className=" min-h-screen flex max-lg:flex-col ">
+        <div>
+          <NavBar />
+          <SideBar />
+        </div>
+        <div className="w-full ">
+           <Outlet />
+        </div>
       </div>
-      <div className="p-6 w-full">
-        <Outlet />
-      </div>
-    </div>
+    </>
   );
 }
