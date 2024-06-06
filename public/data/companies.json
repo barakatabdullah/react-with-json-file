@@ -17,6 +17,104 @@
           "founder": "Henry Ford",
           "foundationYear": 1903,
           "headquarters": "Dearborn, Michigan, U.S."
-  }
+        },
+        {
+          "id": 3,
+          "name": "Hyundai Motor Company",
+          "founder": "Kim Woo-jin",
+          "foundationYear": 1947,
+          "headquarters": "Seoul, South Korea"
+        },
+        {
+          "id": 4,
+          "name": "Volkswagen Group",
+          "founder": "Ferdinand Volkswagen",
+          "foundationYear": 1937,
+          "headquarters": "Wolfsburg, Germany"
+        },
+        {
+          "id": 5,
+          "name": "BMW",
+          "founder": "Fritz Flick",
+          "foundationYear": 1916,
+          "headquarters": "Munich, Germany"
+        },
+        {
+          "id": 6,
+          "name": "Audi",
+          "founder": "August Horch",
+          "foundationYear": 1909,
+          "headquarters": "Neckarsulm, Germany"
+        },
+        {
+          "id": 7,
+          "name": "General Motors",
+          "founder": "William C. Durant",
+          "foundationYear": 1908,
+          "headquarters": "Detroit, Michigan, U.S."
+        },
+        {
+          "id": 8,
+          "name": "Toyota Motor Corporation",
+          "founder": "Kiyoshi Toyoda",
+          "foundationYear": 1937,
+          "headquarters": "Toyota, Aichi, Japan"
+        },
+        {
+          "id": 9,
+          "name": "Honda Motor Co., Ltd.",
+          "founder": "Suzuki Keiichi",
+          "foundationYear": 1948,
+          "headquarters": "Tokyo, Japan"
+        },
+        {
+          "id": 10,
+          "name": "Nissan Motor Co., Ltd.",
+          "founder": "Ingenuo Sakutaro",
+          "foundationYear": 1933,
+          "headquarters": "Yokohama, Japan"
+        },
+        {
+          "id": 11,
+          "name": "Daimler AG",
+          "founder": "Ferdinand Daimler",
+          "foundationYear": 1890,
+          "headquarters": "Mannheim, Germany"
+        },
+        {
+          "id": 12,
+          "name": "Mercedes-Benz",
+          "founder": "Karl Benz",
+          "foundationYear": 1926,
+          "headquarters": "Stuttgart, Germany"
+        },
+        {
+          "id": 13,
+          "name": "Peugeot",
+          "founder": "Pierre-Jean Ducasse",
+          "foundationYear": 1810,
+          "headquarters": "Sochaux, France"
+        },
+        {
+          "id": 14,
+          "name": "Renault",
+          "founder": "Louis Renault",
+          "foundationYear": 1898,
+          "headquarters": "Flatin, France"
+        },
+        {
+          "id": 15,
+          "name": "Volvo Cars",
+          "founder": "Henrik Volvo",
+          "foundationYear": 1927,
+          "headquarters": "Gothenburg, Sweden"
+        },
+        {
+          "id": 16,
+          "name": "Skoda Auto a.s.",
+          "founder": "Adolf Wenzel",
+          "foundationYear": 1895,
+          "headquarters": "Prague, Czech Republic"
+        }
 ]
 }
