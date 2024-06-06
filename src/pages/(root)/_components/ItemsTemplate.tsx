@@ -1,36 +1,27 @@
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
-import { Rating } from "primereact/rating";
-import { Product } from "../../../typs";
-import { Tag } from "primereact/tag";
 import { useNavigate } from "react-router-dom";
 
-export function ItemTemplate(product:Product) {
+export function ItemTemplate(car) {
     const navigate = useNavigate();
-    const cardHeader = (product:Product) => (
+    const cardHeader = (car) => (
         <div className="overflow-hidden rounded-2xl top-0 flex flex-col relative h-60">
             <img
                 className="max-h-full h-auto w-auto block object-contain	"
-                src={product.images?.find(() => true)} />
-            <Rating
-                className="absolute flex justify-center bottom-0 w-full"
-                value={product.rating}
-                readOnly
-                cancel={false}
-            ></Rating>
+                src={car.image} />
         </div>
     );
 
-    function cardFooter(product:Product) {
+    function cardFooter(car) {
        
         return (
             <div className="flex items-center justify-between ">
-                <span className="font-bold text-6">${product.price}</span>
+                <span className="font-bold text-6">${car.price}</span>
 
                 <Button
                     text
                     label="More details"
-                    onClick={()=>navigate('/product/' + product.id)}
+                    onClick={()=>navigate('/car/' + car.id)}
                     icon="i-tabler-arrow-right"
                     iconPos="right" />
             </div>
@@ -38,20 +29,20 @@ export function ItemTemplate(product:Product) {
     }
     return (
         <Card
-            header={cardHeader(product)}
-            title={product.title}
+            header={cardHeader(car)}
+            title={car.title}
             subTitle={(
                 <div className="flex items-center justify-between gap-2">
                     <div className="flex items-center gap-2">
-                    <i className="i-tabler-tag block"></i>
-                    <span className="text-4 font-bold">{product.category}</span>
+                    <i className="i-tabler-building block"></i>
+                    <span className="text-4 font-bold">{car.company}</span>
                     </div>
-                    <Tag value={product.stock > 0 ? "In stock" : "Out of stock"} severity={product.stock === 0 ? 'danger':product.stock >10? 'success':'warning'} ></Tag>
+                   
                 </div>
 
             )}
-            footer={cardFooter(product)}
-            key={product.id}
+            footer={cardFooter(car)}
+            key={car.id}
             className="rounded-2xl "
             pt={{
                 root:{className:'shadow-none! border'},

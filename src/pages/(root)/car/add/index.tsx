@@ -2,21 +2,20 @@ import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputText";
 import { FileUpload } from "primereact/fileupload";
 import { useForm, Controller } from "react-hook-form";
-import { getCategories } from "./_utils";
-import { useQuery } from "@tanstack/react-query";
+// import { useQuery } from "@tanstack/react-query";
 import { Toast } from "primereact/toast";
 import { useRef, useState } from "react";
 import { classNames } from "primereact/utils";
 import { InputNumber } from "primereact/inputnumber";
 
 
-export default function AddProduct() {
+export default function AddCar() {
   const toast = useRef(null);
 
-  const {data } = useQuery({
-    queryKey: ["categories"],
-    queryFn: getCategories,
-  });
+  // const {data } = useQuery({
+  //   queryKey: ["categories"],
+  //   queryFn: getCategories,
+  // });
 
   const onSubmit = (data: any) => {
     console.log(data);
@@ -35,7 +34,7 @@ export default function AddProduct() {
     <div className="w-full p-6 flex gap-4 items-center justify-center">
       <Toast ref={toast}/>
     <Card className="w-full">
-      <h3 className=" mb-8 font-bold text-6">Add Product</h3>
+      <h3 className=" mb-8 font-bold text-6">Add Car</h3>
       <form
         onSubmit={methods.handleSubmit(onSubmit)}
         className=" w-full flex flex-col gap-4"
@@ -91,7 +90,7 @@ export default function AddProduct() {
             }}
             render={({ field,fieldState }) =>(
               <>
-              <Dropdown options={data}  {...field} id="category" />
+              <Dropdown   {...field} id="category" />
               <span className="text-red">{fieldState.error?.message}</span>
 
               </>

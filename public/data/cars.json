@@ -1,0 +1,38 @@
+{
+    "cars": [
+      {
+        "id": 1,
+        "title": "2023 Tesla Model S",
+        "price": 70000,
+        "company": "Tesla",
+        "model": "Model S",
+        "description": "The Tesla Model S is a full-size luxury sedan manufactured and marketed by Tesla, Inc. It is the company's second model, after the Roadster. The Model S was launched in June 2008 and reached production in June 2012, making it the first zero-emission luxury sedan to enter mass production.",
+        "image": "https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-s-exterior-654d3a5e814cc.png?crop=0.548xw:0.642xh;0.223xw,0.180xh&resize=768:*",
+        "images": [
+          "https://example.com/images/model-s-exterior.jpg",
+          "https://example.com/images/model-s-interior.jpg"
+        ],
+        "rating": 4.8,
+        "stock": 10,
+        "category": "Electric cars",
+        "tags": ["electric", "luxury", "suv"]
+      },
+      {
+        "id": 2,
+        "title": "2024 Ford Mustang Mach-E",
+        "price": 45000,
+        "company": "Ford",
+        "model": "Mustang Mach-E",
+        "description": "The Ford Mustang Mach-E is a battery-electric SUV manufactured and marketed by Ford Motor Company. It is the first fully electric vehicle in the iconic Ford Mustang lineage, which dates back to the 1960s. The Mach-E was unveiled at the 2020 Los Angeles Auto Show and entered production in 2022.",
+        "image": "https://www.motortrend.com/uploads/2022/09/2024-ford-mustang-gt-03.jpg",
+        "images": [
+          "https://example.com/images/mach-e-exterior.jpg",
+          "https://example.com/images/mach-e-interior.jpg"
+        ],
+        "rating": 4.5,
+        "stock": 8,
+        "category": "Electric cars",
+        "tags": ["electric", "suv"]
+      }
+    ]
+}

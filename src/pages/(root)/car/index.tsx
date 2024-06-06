@@ -1,6 +1,6 @@
-import { useLocation, useParams } from "react-router-dom"
+import {  useParams } from "react-router-dom"
 import { getProduct } from "./_utils";
-import { keepPreviousData, useQuery } from "@tanstack/react-query";
+import {  useQuery } from "@tanstack/react-query";
 import { Button } from "primereact/button";
 import { addToCart, useUserStore } from "../../../stores/user";
 import { Skeleton } from "primereact/skeleton";
@@ -9,7 +9,7 @@ import { InputNumber } from "primereact/inputnumber";
 import { useState } from "react";
 
 
-export default function Product(){
+export default function Car(){
     const userStore = useUserStore()
     let { id } = useParams();
     const [quantity,setQuentity] = useState(1)

@@ -1,0 +1,22 @@
+{
+
+    "companies": [
+        {
+          "id": 1,
+          "name": "Tesla, Inc.",
+          "founder": "Elon Musk",
+          "foundationYear": 2003,
+          "headquarters": "Palo Alto, California, U.S.",
+          "CEO": "Andreas Raab",
+          "website": "https://www.tesla.com",
+          "description": "Tesla, Inc. is an American electric vehicle and clean energy company that specializes in battery energy storage from home to grid-scale."
+        },
+        {
+          "id": 2,
+          "name": "Ford Motor Company",
+          "founder": "Henry Ford",
+          "foundationYear": 1903,
+          "headquarters": "Dearborn, Michigan, U.S."
+  }
+]
+}
