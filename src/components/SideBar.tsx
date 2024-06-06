@@ -1,46 +1,22 @@
-import { Menu } from "primereact/menu";
-import NavItemTemplate from "./NavItemTemplate";
+import { Link} from "react-router-dom";
+import { Avatar } from "primereact/avatar";
+import NavMenu from "./NavMenu";
 
-const items = [
-  {
-    label: "Dummy Json",
-    items: [
-      {
-        label: "Home",
-        icon: "i-tabler-home",
-        template: NavItemTemplate,
-        page: "/",
-      },
-
-      {
-        label: "Add Car",
-        icon: "i-tabler-plus",
-        template: NavItemTemplate,
-        page: "/car/add",
-      },
-    ],
-  },
-];
 export default function SideBar() {
-  return (
-    <div className="h-screen w-15rem">
-      <div className="flex justify-center h-screen fixed">
-        <div className="relative card  h-full">
-          <Menu
-            pt={{
-              root: { className: "rounded-l-0! h-full" },
-            }}
-            model={items}
-            className=" w-15rem"
-          />
 
-          <div
-            className="absolute bottom-0 w-[90%] flex items-center cursor-pointer hover:bg-indigo-50 p-3 m-2 rounded-2 parent:mt-auto"
-            onClick={() => {}}
-          >
-            <i className="i-tabler-logout" />
-            <span className="ml-2">Logout</span>
-          </div>
+  return (
+    <div className="h-screen w-40 max-lg:hidden">
+      <div className=" bg-white z-100 flex flex-col items-center justify-center h-screen fixed left-0 top-0 bottom-0 border">
+        <div className="pt-10 w-16">
+          <Link to="/">
+            <img src="/logo.svg" alt="Acara" />
+          </Link>
+        </div>
+        <NavMenu/>
+        <div className="pb-10 w-14">
+          <Link to="/">
+            <Avatar className="w-full h-full aspect-square object-contain rounded-4 overflow-hidden" image="/photos/profile.png"  />
+          </Link>
         </div>
       </div>
     </div>
