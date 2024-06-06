@@ -2,7 +2,6 @@ import { useParams } from "react-router-dom";
 import { getProduct } from "./_utils";
 import { useQuery } from "@tanstack/react-query";
 import { Button } from "primereact/button";
-import { addToCart, useUserStore } from "../../../stores/user";
 import { Skeleton } from "primereact/skeleton";
 import { Rating } from "primereact/rating";
 import { InputNumber } from "primereact/inputnumber";
@@ -10,16 +9,16 @@ import { useState } from "react";
 import { Card } from "primereact/card";
 
 export default function Car() {
-  const userStore = useUserStore();
+
   const { id } = useParams();
   const [quantity, setQuentity] = useState<number | null>(1);
   const { isPending, data } = useQuery({
     queryKey: ["product"],
-    // @ts-expect-error: fix later
+
     queryFn: () => getProduct(id),
   });
 
-  console.log(userStore.cart);
+
   if (isPending)
     return (
       <div className="p5">
@@ -50,11 +49,7 @@ export default function Car() {
             <Button
               label="Add to cart"
               onClick={() => {
-                addToCart({
-                  id: data?.id,
-                  price: data?.price,
-                  quantity: quantity ? quantity : 1,
-                });
+               
               }}
             />
           </div>

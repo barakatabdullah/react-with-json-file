@@ -1,7 +1,7 @@
 import api from "../../../config/axios";
-import { Product } from "../../../typs";
 
-export async function getProduct(id: Product["id"]) {
+// @ts-expect-error: fix later
+export async function getProduct(id) {
   const { data } = await api.get("products/" + id);
   return data;
 }
