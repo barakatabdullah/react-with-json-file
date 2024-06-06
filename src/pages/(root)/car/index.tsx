@@ -7,14 +7,16 @@ import { Skeleton } from "primereact/skeleton";
 import { Rating } from "primereact/rating";
 import { InputNumber } from "primereact/inputnumber";
 import { useState } from "react";
+import { Card } from "primereact/card";
 
 
 export default function Car(){
     const userStore = useUserStore()
-    let { id } = useParams();
-    const [quantity,setQuentity] = useState(1)
+    const { id } = useParams();
+    const [quantity,setQuentity] = useState<number|null>(1)
     const { isPending, data } = useQuery({
         queryKey: ["product"],
+        // @ts-expect-error: fix later
         queryFn: ()=> getProduct(id),
       });
 
@@ -35,7 +37,7 @@ export default function Car(){
                     <Rating value={data?.rating} readOnly cancel={false}/>
                 <div className="flex gap-4">
                 <InputNumber value={quantity} onChange={(e) => setQuentity(e.value)} showButtons />
-                <Button label="Add to cart" onClick={() => {addToCart({id:data?.id,price:data?.price,quantity:quantity})}} />
+                <Button label="Add to cart" onClick={() => {addToCart({id:data?.id,price:data?.price,quantity:quantity? quantity:1})}} />
                 </div>
                 </div>
             </div>

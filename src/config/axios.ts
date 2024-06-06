@@ -7,11 +7,6 @@ const api = axios.create({
   // Request timeout
   timeout: 60000,
 
-  // Request headers
-  // headers: {
-  //   'Content-Type': 'application/json',
-  //   Authorization: `Bearer ${getUserToken()}`
-  // },
 });
 
 export default api;

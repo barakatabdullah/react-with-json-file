@@ -1,7 +1,8 @@
 import { useNavigate } from "react-router-dom";
 
 
-export default function NavItemTemplate(item: any) {
+// @ts-expect-error: fix later
+export default function NavItemTemplate(item) {
     const navigate = useNavigate();
 
     return (

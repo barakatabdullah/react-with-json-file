@@ -7,6 +7,8 @@ import { Toast } from "primereact/toast";
 import { useRef, useState } from "react";
 import { classNames } from "primereact/utils";
 import { InputNumber } from "primereact/inputnumber";
+import { Card } from "primereact/card";
+import { Button } from "primereact/button";
 
 
 export default function AddCar() {
@@ -17,11 +19,12 @@ export default function AddCar() {
   //   queryFn: getCategories,
   // });
 
-  const onSubmit = (data: any) => {
+  // @ts-expect-error: fix later
+    const onSubmit = (data) => {
     console.log(data);
-    toast.current?.show({severity:'success', summary: 'Success', detail:'Message Content', life: 3000});
+    // toast.current?.show({severity:'success', summary: 'Success', detail:'Message Content', life: 3000});
   };
-  const [price, setPrice] = useState(0);
+  const [price, setPrice] = useState<number>(0);
 
     const methods = useForm(
       {
@@ -109,9 +112,9 @@ export default function AddCar() {
               min: 1,
               max: 10000,
             }}
-            render={({ field,fieldState }) => (
+            render={({ fieldState }) => (
               <>
-              <InputNumber value={price} onValueChange={(e) => setPrice(e.value)} className={classNames({ 'p-invalid': fieldState.error })} id="price" />
+              <InputNumber value={price} onValueChange={(e) => setPrice(e.value?e.value:1)} className={classNames({ 'p-invalid': fieldState.error })} id="price" />
               <span className="text-red">{fieldState.error?.message}</span>
 
               </>

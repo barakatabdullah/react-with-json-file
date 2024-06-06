@@ -38,7 +38,6 @@
     "sass": "^1.77.4",
     "typescript": "^5.2.2",
     "unocss": "^0.60.3",
-    "unplugin-auto-import": "^0.17.6",
     "vite": "^5.2.0"
   }
 }
