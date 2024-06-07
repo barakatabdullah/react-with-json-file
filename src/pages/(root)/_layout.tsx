@@ -12,9 +12,9 @@ export default function Layout() {
           <NavBar />
           <SideBar />
         </div>
-        <div className="w-full ">
-           <Outlet />
-           <Footer/>
+        <div className="w-full min-h-full flex flex-col">
+          <Outlet />
+          <Footer />
         </div>
       </div>
     </>

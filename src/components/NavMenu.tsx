@@ -8,15 +8,16 @@ const menuItems = [
       page: "/",
     },
     {
-      label: "Companies",
-      icon: "i-tabler-building",
-      page: "/",
-    },
-    {
       label: "Cars",
       icon: "i-tabler-car",
       page: "/cars",
     },
+    {
+      label: "Companies",
+      icon: "i-tabler-building",
+      page: "/",
+    },
+
     {
       label: "Bookmarks",
       icon: "i-tabler-bookmark",
