@@ -29,7 +29,7 @@ const socialItems = [
 ];
 export default function SocialWedgits() {
   return (
-    <div className="grid grid-cols-4 gap-4 h-full">
+    <div className="grid grid-cols-4 max-lg:grid-cols-2 gap-4 h-full">
       {socialItems.map((item) => (
         <Card
           className=" shadow-none border"

@@ -13,73 +13,81 @@ export default function Home() {
     placeholderData: keepPreviousData,
     queryKey: ["cars"],
     queryFn: getCars,
-    select: (data) => data?.cars,
+    select: (data) => data?.cars?.slice(0, 4),
   });
 
-  console.log(data);
-
   return (
-    <div className=" flex flex-col gap-4 p-12">
+    <div className=" flex flex-col gap-8 p-12">
       <div className="flex justify-between w-full items-center h-40">
         <h2 className="text-7 text-white font-bold">Welcome to Acara Store</h2>
       </div>
 
       <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-4">
         <div className="col-span-1">
-
-          <Card className="shadow-none border">
+          <Card className="shadow-none border m0">
             <div className="flex flex-col gap-6 items-center justify-center">
-
               <h4 className="text-6 text-center  z-2 font-bold">
-              Ready to hit the road <br/>
-              <span className="text-#4338ca">in something new?</span>
+                Ready to hit the road <br />
+                <span className="text-#4338ca">in something new?</span>
               </h4>
-            <div className="py-10">
-              <img src="/photos/messenger.svg" alt="" />
-            </div>
+              <div className="py-10">
+                <img src="/photos/messenger.svg" alt="" />
+              </div>
 
-            <div className="flex gap-4">
-              <Button
-                text
-                label="Browse cars"
-                onClick={() => navigate("/cars")}
-              />
-                            <Button
-                
-                label="Contact us"
-
-              />
-            </div>
+              <div className="flex gap-4">
+                <Button
+                  text
+                  label="Browse cars"
+                  onClick={() => navigate("/cars")}
+                />
+                <Button label="Contact us" />
+              </div>
             </div>
           </Card>
         </div>
 
-
         <div className="col-span-2 flex flex-col gap-4">
-        <SocialWedgits/>
-
           <div className="col-span-4 flex items-center h-full w-full h-60 bg-#4338ca rounded-4 p-6 relative">
-            <h4 className="text-8 text-start text-white font-bold max-sm:text-6">Your journey<br/>starts here.</h4>
+            <h4 className="text-8 text-start text-white font-bold max-sm:text-6">
+              Your journey
+              <br />
+              starts here.
+            </h4>
             <div className="absolute rhight-0 ms-auto w-full">
-              <img className="w-7/10 ms-auto" src="/photos/MC20.png" alt="hero" />
+              <img
+                className="w-7/10 ms-auto"
+                src="/photos/MC20.png"
+                alt="hero"
+              />
             </div>
           </div>
-
+          <SocialWedgits />
         </div>
-
-
       </div>
 
+      <div className="flex flex-col gap-4">
+        <div className="flex justify-between items-center">
+          <h2 className="text-7 font-bold">Cars</h2>
+          <Button
+            text
+            label="Browse cars"
+            onClick={() => navigate("/cars")}
+            icon="i-tabler-arrow-right"
+            iconPos="right"
+          />
+        </div>
 
-      <div>
-      <DataView
+        <DataView
           value={data}
           loading={isLoading}
           layout="grid"
           pt={{
-            root: { className: "rounded-6 overflow-hidden" },
-            content: { className: "p2 bg-transparent" },
-            grid: { className: "grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1" },
+            root: { className: "rounded-6  " },
+            content: { className: " bg-transparent" },
+            grid: {
+              className:
+                "grid grid-cols-4 gap-4 max-xl:grid-cols-3 max-lg:grid-cols-2 max-sm:grid-cols-1",
+            },
           }}
           itemTemplate={ItemTemplate}
           rows={4}

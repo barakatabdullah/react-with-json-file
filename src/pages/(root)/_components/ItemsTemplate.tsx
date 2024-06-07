@@ -9,7 +9,7 @@ export function ItemTemplate(car) {
   const cardHeader = (car) => (
     <div className="overflow-hidden rounded-2xl top-0 flex flex-col relative h-60">
       <img
-        className="max-h-full h-auto w-auto block object-contain	"
+        className="w-full h-full block object-cover	"
         src={car.image}
       />
     </div>
@@ -47,7 +47,7 @@ export function ItemTemplate(car) {
       className="rounded-2xl "
       pt={{
         root: { className: "shadow-none! border" },
-        title: { className: "h-20 truncate" },
+        title: { className: "h-20  break-words" },
         content: { className: "p1!" },
       }}
     ></Card>
