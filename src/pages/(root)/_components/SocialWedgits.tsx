@@ -32,6 +32,7 @@ export default function SocialWedgits() {
     <div className="grid grid-cols-4 max-lg:grid-cols-2 gap-4 h-full">
       {socialItems.map((item) => (
         <Card
+          key={item.platform}
           className=" shadow-none border"
           onClick={() => window.location.replace(item.link)}
         >

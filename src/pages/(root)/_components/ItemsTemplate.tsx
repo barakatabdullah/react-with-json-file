@@ -23,7 +23,7 @@ export function ItemTemplate(car) {
         <Button
           text
           label="More details"
-          onClick={() => navigate("/car/" + car.id)}
+          onClick={() => navigate("/cars/" + car.id)}
           icon="i-tabler-arrow-right"
           iconPos="right"
         />

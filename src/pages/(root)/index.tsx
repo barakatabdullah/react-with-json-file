@@ -6,6 +6,7 @@ import { useNavigate } from "react-router-dom";
 import { Card } from "primereact/card";
 import SocialWedgits from "./_components/SocialWedgits";
 import { DataView } from "primereact/dataview";
+import Header from "../../components/Header";
 
 export default function Home() {
   const navigate = useNavigate();
@@ -18,9 +19,7 @@ export default function Home() {
 
   return (
     <div className=" flex flex-col gap-8 p-12">
-      <div className="flex justify-between w-full items-center h-40">
-        <h2 className="text-7 text-white font-bold">Welcome to Acara Store</h2>
-      </div>
+      <Header title="Welcome to Acara Store" />
 
       <div className="grid grid-cols-3 max-lg:grid-cols-1 gap-4">
         <div className="col-span-1">

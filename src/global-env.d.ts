@@ -1,6 +1,4 @@
-export{} 
-
-interface Car{
+export interface Car{
   id: number;
   title: string;
   price: number;
@@ -15,7 +13,7 @@ interface Car{
   tags: string[];
 }
 
- interface Company{
+ export interface Company{
   id: number;
   name: string;
   founder?: string;
