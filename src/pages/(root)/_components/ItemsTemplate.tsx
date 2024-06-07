@@ -1,17 +1,37 @@
 import { Button } from "primereact/button";
 import { Card } from "primereact/card";
-import { useNavigate } from "react-router-dom";
+import { useNavigate, useOutletContext } from "react-router-dom";
+import { Boxes, Car } from "../../../global-env";
+import { toggleBookmark, useUserStore } from "../../../stores/user";
 
 // @ts-expect-error: fix later
 export function ItemTemplate(car) {
   const navigate = useNavigate();
-  // @ts-expect-error: fix later
-  const cardHeader = (car) => (
+  const userStore = useUserStore();
+  const { toast } = useOutletContext<Boxes>();
+
+  const cardHeader = (car: Car) => (
     <div className="overflow-hidden rounded-2xl top-0 flex flex-col relative h-60">
-      <img
-        className="w-full h-full block object-cover	"
-        src={car.thumbnail}
+      <Button
+        className="absolute top-3 right-3 z-10"
+pt={{
+  icon:{className:'text-5'}
+}}
+        size="small"
+        icon={`${
+          userStore.bookmarks.find((c: Car) => c.id == Number(car.id))
+            ? "i-tabler-bookmark-filled"
+            : "i-tabler-bookmark"
+        }`}
+        onClick={() => {
+          toggleBookmark(car);
+          toast({
+            detail: "Action done successfully.",
+            severity: "success",
+          });
+        }}
       />
+      <img className="w-full h-full block object-cover	" src={car.thumbnail} />
     </div>
   );
   // @ts-expect-error: fix later

@@ -11,6 +11,7 @@ interface UserStore {
     getUserToken(): string | null;
     addBookmark(car: Car): void;
     removeBookmark(id: number): void;
+    toggleBookmark(car:Car): void;
   };
 }
 
@@ -45,6 +46,15 @@ export const useUserStore = create<UserStore>((set, get) => ({
         JSON.stringify(bookmarks.filter((car) => car.id !== id))
       );
     },
+
+    toggleBookmark(car) {
+      const bookmarks = get().bookmarks;
+      if (bookmarks.find((c) => c.id === car.id)) {
+        get().actions.removeBookmark(car.id);
+      } else {
+        get().actions.addBookmark(car);
+      }
+    },
   },
 }));
 
@@ -52,6 +62,5 @@ export const {
   setUserName,
   setUserToken,
   getUserToken,
-  addBookmark,
-  removeBookmark,
+  toggleBookmark
 } = useUserStore.getState().actions;

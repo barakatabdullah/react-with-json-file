@@ -8,12 +8,13 @@ import Header from "../../../components/Header";
 import { Image } from "primereact/image";
 import { Rating } from "primereact/rating";
 import { Button } from "primereact/button";
-import { addBookmark } from "../../../stores/user";
+import { toggleBookmark, useUserStore } from "../../../stores/user";
 
 
 export default function Car() {
   const { id } = useParams();
   const { toast } = useOutletContext<Boxes>()
+  const userStore = useUserStore();
   
   const { isPending, data } = useQuery({
     queryKey: ["car", id],
@@ -90,13 +91,13 @@ export default function Car() {
 
             <div className="flex justify-center gap-4">
             <Button
-              outlined
+              outlined={userStore.bookmarks.find((car: CarType) => car.id == Number(id)) ? false: true}
               severity="secondary"
-              icon="i-tabler-bookmark"
+              icon={`${userStore.bookmarks.find((car: CarType) => car.id == Number(id)) ? "i-tabler-bookmark-filled" : "i-tabler-bookmark"}`}
               onClick={()=>{
-                addBookmark(data)
+                toggleBookmark(data)
                 toast({
-                  detail: 'Added successfully.',
+                  detail: 'Action done successfully.',
                   severity: 'success',
                 });}
               }

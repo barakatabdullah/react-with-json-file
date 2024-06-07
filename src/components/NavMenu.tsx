@@ -21,7 +21,7 @@ const menuItems = [
     {
       label: "Bookmarks",
       icon: "i-tabler-bookmark",
-      page: "/",
+      page: "/bookmarks",
     },
     {
       label: "Chat",
