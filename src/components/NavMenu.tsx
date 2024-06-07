@@ -12,11 +12,11 @@ const menuItems = [
       icon: "i-tabler-car",
       page: "/cars",
     },
-    {
-      label: "Companies",
-      icon: "i-tabler-building",
-      page: "/",
-    },
+    // {
+    //   label: "Companies",
+    //   icon: "i-tabler-building",
+    //   page: "/",
+    // },
 
     {
       label: "Bookmarks",

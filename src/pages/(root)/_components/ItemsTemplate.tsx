@@ -10,7 +10,7 @@ export function ItemTemplate(car) {
     <div className="overflow-hidden rounded-2xl top-0 flex flex-col relative h-60">
       <img
         className="w-full h-full block object-cover	"
-        src={car.image}
+        src={car.thumbnail}
       />
     </div>
   );

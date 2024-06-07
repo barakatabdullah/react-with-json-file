@@ -5,7 +5,7 @@ export interface Car{
   company: string;
   model: string;
   description: string;
-  image: string;
+  thumbnail: string;
   images: string[];
   rating: number;
   stock: number;
@@ -20,3 +20,8 @@ export interface Car{
   foundationYear?: number;
   headquarters?: string;
   }
+
+  type Boxes = {
+    confirm: (confirmContent: ConfirmContent) => Promise<boolean>;
+    toast: (toastData: ToastMessage | ToastMessage[]) => void;
+  };
