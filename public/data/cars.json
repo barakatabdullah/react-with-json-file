@@ -1,259 +1,259 @@
 {
-    "cars": [
-      {
-        "id": 1,
-        "title": "2023 Tesla Model S",
-        "price": 70000,
-        "company": "Tesla",
-        "model": "Model S",
-        "description": "The Tesla Model S is a full-size luxury sedan manufactured and marketed by Tesla, Inc. It is the company's second model, after the Roadster. The Model S was launched in June 2008 and reached production in June 2012, making it the first zero-emission luxury sedan to enter mass production.",
-        "image": "https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-s-exterior-654d3a5e814cc.png?crop=0.548xw:0.642xh;0.223xw,0.180xh&resize=768:*",
-        "images": [
-          "https://example.com/images/model-s-exterior.jpg",
-          "https://example.com/images/model-s-interior.jpg"
-        ],
-        "rating": 4.8,
-        "stock": 10,
-        "category": "Electric cars",
-        "tags": ["electric", "luxury", "suv"]
-      },
-      {
-        "id": 2,
-        "title": "2024 Ford Mustang Mach-E",
-        "price": 45000,
-        "company": "Ford",
-        "model": "Mustang Mach-E",
-        "description": "The Ford Mustang Mach-E is a battery-electric SUV manufactured and marketed by Ford Motor Company. It is the first fully electric vehicle in the iconic Ford Mustang lineage, which dates back to the 1960s. The Mach-E was unveiled at the 2020 Los Angeles Auto Show and entered production in 2022.",
-        "image": "https://www.motortrend.com/uploads/2022/09/2024-ford-mustang-gt-03.jpg",
-        "images": [
-          "https://example.com/images/mach-e-exterior.jpg",
-          "https://example.com/images/mach-e-interior.jpg"
-        ],
-        "rating": 4.5,
-        "stock": 8,
-        "category": "Electric cars",
-        "tags": ["electric", "suv"]
-      },
-      {
-        "id": 3,
-        "title": "2023 Chevrolet Bolt EV",
-        "price": 37000,
-        "company": "Chevrolet",
-        "model": "Bolt EV",
-        "description": "The Chevrolet Bolt EV is a battery-electric compact car produced by General Motors. It was first released in 2016, and was the first mass-market battery-electric car to be sold in the United States. The Chevrolet Bolt EV is powered by a 113 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2020/06/chevrolet-bolt-ev-1.jpg",
-        "images": [
-          "https://example.com/images/bolt-exterior.jpg",
-          "https://example.com/images/bolt-interior.jpg"
-        ],
-        "rating": 4.6,
-        "stock": 12,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 4,
-        "title": "2023 Hyundai Kona Electric",
-        "price": 43000,
-        "company": "Hyundai",
-        "model": "Kona Electric",
-        "description": "The Hyundai Kona Electric is a battery-electric subcompact crossover produced by Hyundai Motor Company. It was first released in 2019, and is the first mass-market electric vehicle produced by Hyundai. The Hyundai Kona Electric is powered by a 70 kWh battery, which is capable of driving the car approximately 220 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/hyundai-kona-electric-1.jpg",
-        "images": [
-          "https://example.com/images/kona-exterior.jpg",
-          "https://example.com/images/kona-interior.jpg"
-        ],
-        "rating": 4.7,
-        "stock": 10,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 5,
-        "title": "2024 Nissan Leaf",
-        "price": 32000,
-        "company": "Nissan",
-        "model": "Leaf",
-        "description": "The Nissan Leaf is a battery-electric compact car produced by Nissan. It was first released in 2010, and is the first mass-market battery-electric car to be sold in the United States. The Nissan Leaf is powered by a 50 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2020/06/nissan-leaf-1.jpg",
-        "images": [
-          "https://example.com/images/leaf-exterior.jpg",
-          "https://example.com/images/leaf-interior.jpg"
-        ],
-        "rating": 4.5,
-        "stock": 15,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 6,
-        "title": "2025 Volkswagen ID.4",
-        "price": 48000,
-        "company": "Volkswagen",
-        "model": "ID.4",
-        "description": "The Volkswagen ID.4 is a battery-electric compact car produced by Volkswagen Group. It was first released in 2020, and is the first mass-market electric vehicle produced by Volkswagen. The Volkswagen ID.4 is powered by a 90 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/volkswagen-id4-1.jpg",
-        "images": [
-          "https://example.com/images/id4-exterior.jpg",
-          "https://example.com/images/id4-interior.jpg"
-        ],
-        "rating": 4.6,
-        "stock": 8,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 7,
-        "title": "2026 Audi e-tron",
-        "price": 55000,
-        "company": "Audi",
-        "model": "e-tron",
-        "description": "The Audi e-tron is a battery-electric compact car produced by Audi. It was first released in 2020, and is the first mass-market battery-electric car produced by Audi. The Audi e-tron is powered by a 80 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/audi-e-tron-1.jpg",
-        "images": [
-          "https://example.com/images/e-tron-exterior.jpg",
-          "https://example.com/images/e-tron-interior.jpg"
-        ],
-        "rating": 4.7,
-        "stock": 12,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 8,
-        "title": "2027 BMW iX3",
-        "price": 47000,
-        "company": "BMW",
-        "model": "iX3",
-        "description": "The BMW iX3 is a battery-electric compact SUV produced by BMW. It was first released in 2020, and is the first mass-market battery-electric SUV produced by BMW. The BMW iX3 is powered by a 60 kWh battery, which is capable of driving the car approximately 220 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/bmw-ix3-1.jpg",
-        "images": [
-          "https://example.com/images/ix3-exterior.jpg",
-          "https://example.com/images/ix3-interior.jpg"
-        ],
-        "rating": 4.6,
-        "stock": 10,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 9,
-        "title": "2028 Honda Clarity",
-        "price": 34000,
-        "company": "Honda",
-        "model": "Clarity",
-        "description": "The Honda Clarity is a battery-electric compact car produced by Honda. It was first released in 2020, and is the first mass-market battery-electric car produced by Honda. The Honda Clarity is powered by a 55 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/honda-clarity-1.jpg",
-        "images": [
-          "https://example.com/images/clarity-exterior.jpg",
-          "https://example.com/images/clarity-interior.jpg"
-        ],
-        "rating": 4.5,
-        "stock": 15,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 10,
-        "title": "2029 Kia eSoul",
-        "price": 36000,
-        "company": "Kia",
-        "model": "eSoul",
-        "description": "The Kia eSoul is a battery-electric compact car produced by Kia. It was first released in 2020, and is the first mass-market battery-electric car produced by Kia. The Kia eSoul is powered by a 55 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/kia-e-soul-1.jpg",
-        "images": [
-          "https://example.com/images/e-soul-exterior.jpg",
-          "https://example.com/images/e-soul-interior.jpg"
-        ],
-        "rating": 4.4,
-        "stock": 17,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 11,
-        "title": "2030 Nissan Leaf",
-        "price": 30000,
-        "company": "Nissan",
-        "model": "Leaf",
-        "description": "The Nissan Leaf is a battery-electric compact car produced by Nissan. It was first released in 2010, and is the first mass-market battery-electric car produced by Nissan. The Nissan Leaf is powered by a 50 kWh battery, which is capable of driving the car approximately 220 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/nissan-leaf-1.jpg",
-        "images": [
-          "https://example.com/images/leaf-exterior.jpg",
-          "https://example.com/images/leaf-interior.jpg"
-        ],
-        "rating": 4.6,
-        "stock": 12,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 12,
-        "title": "2031 Chevrolet Bolt",
-        "price": 35000,
-        "company": "Chevrolet",
-        "model": "Bolt",
-        "description": "The Chevrolet Bolt is a battery-electric compact car produced by Chevrolet. It was first released in 2017, and is the first mass-market battery-electric car produced by Chevrolet. The Chevrolet Bolt is powered by a 60 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/chevrolet-bolt-1.jpg",
-        "images": [
-          "https://example.com/images/bolt-exterior.jpg",
-          "https://example.com/images/bolt-interior.jpg"
-        ],
-        "rating": 4.7,
-        "stock": 10,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 13,
-        "title": "2032 Ford Focus Electric",
-        "price": 40000,
-        "company": "Ford",
-        "model": "Focus Electric",
-        "description": "The Ford Focus Electric is a battery-electric compact car produced by Ford. It was first released in 2012, and is the first mass-market electric vehicle produced by Ford. The Ford Focus Electric is powered by a 40 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/ford-focus-electric-1.jpg",
-        "images": [
-          "https://example.com/images/focus-exterior.jpg",
-          "https://example.com/images/focus-interior.jpg"
-        ],
-        "rating": 4.5,
-        "stock": 15,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 14,
-        "title": "2033 Volkswagen ID. Buzz",
-        "price": 42000,
-        "company": "Volkswagen",
-        "model": "ID. Buzz",
-        "description": "The Volkswagen ID. Buzz is a battery-electric microcar produced by Volkswagen Group. It was first released in 2020, and is the first mass-market battery-electric microcar produced by Volkswagen. The Volkswagen ID. Buzz is powered by a 20 kWh battery, which is capable of driving the car approximately 100 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/volkswagen-id-buzz-1.jpg",
-        "images": [
-          "https://example.com/images/buzz-exterior.jpg",
-          "https://example.com/images/buzz-interior.jpg"
-        ],
-        "rating": 4.7,
-        "stock": 12,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      },
-      {
-        "id": 15,
-        "title": "2034 Tesla Model Y",
-        "price": 50000,
-        "company": "Tesla",
-        "model": "Model Y",
-        "description": "The Tesla Model Y is a battery-electric minivan produced by Tesla, Inc. It was first released in 2022, and is the first mass-market battery-electric minivan produced by Tesla. The Tesla Model Y is powered by a 100 kWh battery, which is capable of driving the car approximately 300 miles on a single charge.",
-        "image": "https://www.motortrend.com/uploads/sites/3/2021/06/tesla-model-y-1.jpg",
-        "images": [
-          "https://example.com/images/model-y-exterior.jpg",
-          "https://example.com/images/model-y-interior.jpg"
-        ],
-        "rating": 4.8,
-        "stock": 8,
-        "category": "Electric cars",
-        "tags": ["electric", "compact", "suv"]
-      }
-    ]
+  "cars": [
+    {
+      "id": 1,
+      "title": "2023 Tesla Model S",
+      "price": 70000,
+      "company": "Tesla",
+      "model": "Model S",
+      "description": "The Tesla Model S is a full-size luxury sedan manufactured and marketed by Tesla, Inc. It is the company's second model, after the Roadster. The Model S was launched in June 2008 and reached production in June 2012, making it the first zero-emission luxury sedan to enter mass production.",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2023-tesla-model-s-exterior-654d3a5e814cc.png?crop=0.548xw:0.642xh;0.223xw,0.180xh&resize=768:*",
+      "images": [
+        "https://example.com/images/model-s-exterior.jpg",
+        "https://example.com/images/model-s-interior.jpg"
+      ],
+      "rating": 4.8,
+      "stock": 10,
+      "category": "Electric cars",
+      "tags": ["electric", "luxury", "suv"]
+    },
+    {
+      "id": 2,
+      "title": "2024 Ford Mustang Mach-E",
+      "price": 45000,
+      "company": "Ford",
+      "model": "Mustang Mach-E",
+      "description": "The Ford Mustang Mach-E is a battery-electric SUV manufactured and marketed by Ford Motor Company. It is the first fully electric vehicle in the iconic Ford Mustang lineage, which dates back to the 1960s. The Mach-E was unveiled at the 2020 Los Angeles Auto Show and entered production in 2022.",
+      "image": "https://www.motortrend.com/uploads/2022/09/2024-ford-mustang-gt-03.jpg",
+      "images": [
+        "https://example.com/images/mach-e-exterior.jpg",
+        "https://example.com/images/mach-e-interior.jpg"
+      ],
+      "rating": 4.5,
+      "stock": 8,
+      "category": "Electric cars",
+      "tags": ["electric", "suv"]
+    },
+    {
+      "id": 3,
+      "title": "2023 Chevrolet Bolt EV",
+      "price": 37000,
+      "company": "Chevrolet",
+      "model": "Bolt EV",
+      "description": "The Chevrolet Bolt EV is a battery-electric compact car produced by General Motors. It was first released in 2016, and was the first mass-market battery-electric car to be sold in the United States. The Chevrolet Bolt EV is powered by a 113 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
+      "image": "https://image.cnbcfm.com/api/v1/image/105232079-2018-Chevrolet-Camaro-ZL1-033.jpg?v=1679502991",
+      "images": [
+        "https://example.com/images/bolt-exterior.jpg",
+        "https://example.com/images/bolt-interior.jpg"
+      ],
+      "rating": 4.6,
+      "stock": 12,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 4,
+      "title": "2023 Hyundai Kona Electric",
+      "price": 43000,
+      "company": "Hyundai",
+      "model": "Kona Electric",
+      "description": "The Hyundai Kona Electric is a battery-electric subcompact crossover produced by Hyundai Motor Company. It was first released in 2019, and is the first mass-market electric vehicle produced by Hyundai. The Hyundai Kona Electric is powered by a 70 kWh battery, which is capable of driving the car approximately 220 miles on a single charge.",
+      "image": "https://www.topgear.com/sites/default/files/2023/09/1-Hyundai-Kona-Electric.jpg",
+      "images": [
+        "https://example.com/images/kona-exterior.jpg",
+        "https://example.com/images/kona-interior.jpg"
+      ],
+      "rating": 4.7,
+      "stock": 10,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 5,
+      "title": "2024 Nissan Leaf",
+      "price": 32000,
+      "company": "Nissan",
+      "model": "Leaf",
+      "description": "The Nissan Leaf is a battery-electric compact car produced by Nissan. It was first released in 2010, and is the first mass-market battery-electric car to be sold in the United States. The Nissan Leaf is powered by a 50 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
+      "image": "https://www.motortrend.com/uploads/2023/08/2024-Nissan-LEAF-front-view-37.jpg",
+      "images": [
+        "https://cdn.motor1.com/images/mgl/wMbkX/s3/nissan-leaf-2024.jpg",
+        "https://cdn.motor1.com/images/mgl/2fPx9/s3/nissan-leaf-2024-interior.jpg"
+      ],
+      "rating": 4.5,
+      "stock": 15,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 6,
+      "title": "2025 Volkswagen ID.4",
+      "price": 48000,
+      "company": "Volkswagen",
+      "model": "ID.4",
+      "description": "The Volkswagen ID.4 is a battery-electric compact car produced by Volkswagen Group. It was first released in 2020, and is the first mass-market electric vehicle produced by Volkswagen. The Volkswagen ID.4 is powered by a 90 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
+      "image": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQWNncLKWcWVE8tkMnnnYAgvnpDauY1k6_60A&s",
+      "images": [
+        "https://cdn.motor1.com/images/mgl/wZxTN/s3/volkswagen-id4-2025-front.jpg",
+        "https://cdn.motor1.com/images/mgl/gFuDv/s3/volkswagen-id4-2025-side.jpg"
+      ],
+      "rating": 4.6,
+      "stock": 8,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 7,
+      "title": "2026 Audi e-tron",
+      "price": 55000,
+      "company": "Audi",
+      "model": "e-tron",
+      "description": "The Audi e-tron is a battery-electric compact car produced by Audi. It was first released in 2020, and is the first mass-market battery-electric car produced by Audi. The Audi e-tron is powered by a 80 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
+      "image": "https://cdn.motor1.com/images/mgl/OoowMM/s1/audi-a3-e-tron-il-render-di-motor1.com.webp",
+      "images": [
+        "https://cdn.motor1.com/images/mgl/kYhHh/s3/audi-e-tron-2026-front.jpg",
+        "https://cdn.motor1.com/images/mgl/G8oKr/s3/audi-e-tron-2026-side.jpg"
+      ],
+      "rating": 4.7,
+      "stock": 12,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 8,
+      "title": "2027 BMW iX3",
+      "price": 47000,
+      "company": "BMW",
+      "model": "iX3",
+      "description": "The BMW iX3 is a battery-electric compact SUV produced by BMW. It was first released in 2020, and is the first mass-market battery-electric SUV produced by BMW. The BMW iX3 is powered by a 60 kWh battery, which is capable of driving the car approximately 220 miles on a single charge.",
+      "image": "https://www.carscoops.com/wp-content/uploads/2024/04/2026-BMW-iX3-Carscoops-11-copy.jpg",
+      "images": [
+        "https://cdn.motor1.com/images/mgl/6P35E/s3/bmw-ix3-2027-front.jpg",
+        "https://cdn.motor1.com/images/mgl/U9lZq/s3/bmw-ix3-2027-side.jpg"
+      ],
+      "rating": 4.6,
+      "stock": 10,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 9,
+      "title": "2024 Honda Clarity",
+      "price": 34000,
+      "company": "Honda",
+      "model": "Clarity",
+      "description": "The Honda Clarity is a battery-electric compact car produced by Honda. It was first released in 2020, and is the first mass-market battery-electric car produced by Honda. The Honda Clarity is powered by a 55 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
+      "image": "https://hips.hearstapps.com/hmg-prod/images/2021-honda-clarity-mmp-1-1595867121.jpg?crop=1.00xw:0.750xh;0,0.190xh&resize=1200:*",
+      "images": [
+        "https://cdn.motor1.com/images/mgl/bC9yU/s3/honda-clarity-2028-front.jpg",
+        "https://cdn.motor1.com/images/mgl/uYqRn/s3/honda-clarity-2028-side.jpg"
+      ],
+      "rating": 4.5,
+      "stock": 15,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 10,
+      "title": "2029 Kia eSoul",
+      "price": 36000,
+      "company": "Kia",
+      "model": "eSoul",
+      "description": "The Kia eSoul is a battery-electric compact car produced by Kia. It was first released in 2020, and is the first mass-market battery-electric car produced by Kia. The Kia eSoul is powered by a 55 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
+      "image": "https://cdn.motor1.com/images/mgl/9DWb6/s3/kia-esoul-2029-front.jpg",
+      "images": [
+        "https://cdn.motor1.com/images/mgl/9DWb6/s3/kia-esoul-2029-front.jpg",
+        "https://cdn.motor1.com/images/mgl/Hg76M/s3/kia-esoul-2029-side.jpg"
+      ],
+      "rating": 4.4,
+      "stock": 17,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 11,
+      "title": "2030 Nissan Leaf",
+      "price": 30000,
+      "company": "Nissan",
+      "model": "Leaf",
+      "description": "The Nissan Leaf is a battery-electric compact car produced by Nissan. It was first released in 2010, and is the first mass-market battery-electric car produced by Nissan. The Nissan Leaf is powered by a 50 kWh battery, which is capable of driving the car approximately 220 miles on a single charge.",
+      "image": "https://www.motortrend.com/uploads/sites/3/2021/06/nissan-leaf-1.jpg",
+      "images": [
+        "https://example.com/images/leaf-exterior.jpg",
+        "https://example.com/images/leaf-interior.jpg"
+      ],
+      "rating": 4.6,
+      "stock": 12,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 12,
+      "title": "2031 Chevrolet Bolt",
+      "price": 35000,
+      "company": "Chevrolet",
+      "model": "Bolt",
+      "description": "The Chevrolet Bolt is a battery-electric compact car produced by Chevrolet. It was first released in 2017, and is the first mass-market battery-electric car produced by Chevrolet. The Chevrolet Bolt is powered by a 60 kWh battery, which is capable of driving the car approximately 250 miles on a single charge.",
+      "image": "https://www.motortrend.com/uploads/sites/3/2021/06/chevrolet-bolt-1.jpg",
+      "images": [
+        "https://example.com/images/bolt-exterior.jpg",
+        "https://example.com/images/bolt-interior.jpg"
+      ],
+      "rating": 4.7,
+      "stock": 10,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 13,
+      "title": "2032 Ford Focus Electric",
+      "price": 40000,
+      "company": "Ford",
+      "model": "Focus Electric",
+      "description": "The Ford Focus Electric is a battery-electric compact car produced by Ford. It was first released in 2012, and is the first mass-market electric vehicle produced by Ford. The Ford Focus Electric is powered by a 40 kWh battery, which is capable of driving the car approximately 240 miles on a single charge.",
+      "image": "https://www.motortrend.com/uploads/sites/3/2021/06/ford-focus-electric-1.jpg",
+      "images": [
+        "https://example.com/images/focus-exterior.jpg",
+        "https://example.com/images/focus-interior.jpg"
+      ],
+      "rating": 4.5,
+      "stock": 15,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 14,
+      "title": "2033 Volkswagen ID. Buzz",
+      "price": 42000,
+      "company": "Volkswagen",
+      "model": "ID. Buzz",
+      "description": "The Volkswagen ID. Buzz is a battery-electric microcar produced by Volkswagen Group. It was first released in 2020, and is the first mass-market battery-electric microcar produced by Volkswagen. The Volkswagen ID. Buzz is powered by a 20 kWh battery, which is capable of driving the car approximately 100 miles on a single charge.",
+      "image": "https://www.motortrend.com/uploads/sites/3/2021/06/volkswagen-id-buzz-1.jpg",
+      "images": [
+        "https://example.com/images/buzz-exterior.jpg",
+        "https://example.com/images/buzz-interior.jpg"
+      ],
+      "rating": 4.7,
+      "stock": 12,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
+    },
+    {
+      "id": 15,
+      "title": "2034 Tesla Model Y",
+      "price": 50000,
+      "company": "Tesla",
+      "model": "Model Y",
+      "description": "The Tesla Model Y is a battery-electric minivan produced by Tesla, Inc. It was first released in 2022, and is the first mass-market battery-electric minivan produced by Tesla. The Tesla Model Y is powered by a 100 kWh battery, which is capable of driving the car approximately 300 miles on a single charge.",
+      "image": "https://www.motortrend.com/uploads/sites/3/2021/06/tesla-model-y-1.jpg",
+      "images": [
+        "https://example.com/images/model-y-exterior.jpg",
+        "https://example.com/images/model-y-interior.jpg"
+      ],
+      "rating": 4.8,
+      "stock": 8,
+      "category": "Electric cars",
+      "tags": ["electric", "compact", "suv"]
     }
+  ]
+}
