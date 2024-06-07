@@ -34,8 +34,7 @@ pt={{
       <img className="w-full h-full block object-cover	" src={car.thumbnail} />
     </div>
   );
-  // @ts-expect-error: fix later
-  function cardFooter(car) {
+  function cardFooter(car:Car) {
     return (
       <div className="flex items-center justify-between ">
         <span className="font-bold text-6">${car.price}</span>

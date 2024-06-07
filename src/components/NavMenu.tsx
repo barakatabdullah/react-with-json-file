@@ -36,7 +36,7 @@ export default function NavMenu() {
         <div className="relative flex flex-col items-center justify-center gap-4 w-40 h-full">
         {menuItems.map((item) => {
           return (
-            <div>
+            <div key={item.label}>
               <Button
                 className="w-16 h-16 bg-#f5f8facc text-gray-400 text-5 hover:text-#4f46e5"
                 text
