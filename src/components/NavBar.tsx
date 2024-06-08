@@ -10,7 +10,7 @@ export default function NavBar() {
   return (
     <div className="w-screen h-20 lg:hidden">
       <div className="bg-white h-20 z-100 flex items-center justify-between w-screen fixed left-0 top-0 rhight-0 border">
-        <div className="container mx-auto flex items-center justify-between">
+        <div className="container mx-auto flex items-center justify-between max-sm:px-6">
           <div className="w-12">
             <Link to="/">
               <img src="/logo.svg" alt="Acara" />
