@@ -26,7 +26,7 @@ const menuItems = [
     {
       label: "Chat",
       icon: "i-tabler-message",
-      page: "/car/add",
+      page: "/",
     },
   ];
 
