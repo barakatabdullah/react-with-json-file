@@ -1,12 +1,7 @@
-/* eslint-disable @typescript-eslint/no-unused-vars */
+
 import { Dropdown } from "primereact/dropdown";
 import { InputText } from "primereact/inputText";
-import {
-  FileUpload,
-  FileUploadHeaderTemplateOptions,
-} from "primereact/fileupload";
 import { useForm, Controller } from "react-hook-form";
-import { useState } from "react";
 import { classNames } from "primereact/utils";
 import { InputNumber } from "primereact/inputnumber";
 import { Card } from "primereact/card";
@@ -16,44 +11,22 @@ import { useQuery, keepPreviousData } from "@tanstack/react-query";
 import { getCompanies } from "../../_utils";
 import { useNavigate, useOutletContext } from "react-router-dom";
 import { Boxes } from "../../../../global-env";
+import { getDownloadURL, ref, uploadBytes } from "firebase/storage";
+import { storage } from "../../../../config/firebase";
 
-const chooseOptions = {
-  icon: "i-tabler-plus",
-  iconOnly: true,
-  className: "custom-choose-btn p-button-outlined",
-};
-const uploadOptions = {
-  icon: "i-tabler-upload",
-  iconOnly: true,
-  className: "custom-upload-btn p-button-success  p-button-outlined",
-};
-const cancelOptions = {
-  icon: "i-tabler-x",
-  iconOnly: true,
-  className: "custom-cancel-btn p-button-danger p-button-outlined",
-};
-
-function UploadHeaderTemplate(props: FileUploadHeaderTemplateOptions) {
-  return (
-    <div className="flex items-center gap-4 p2 border rounded-t-4">
-      {props.chooseButton}
-    </div>
-  );
-}
 export default function AddCar() {
   const { toast } = useOutletContext<Boxes>();
   const navigate = useNavigate();
-  const [price, setPrice] = useState<number>(0);
 
-  const {handleSubmit, control} = useForm({
-    values: {
+  const { handleSubmit, control, register } = useForm({
+    defaultValues: {
+      thumbnail: null,
+      company: null,
       title: "",
       price: 0,
-      company: "",
-      thumbnail: "",
       description: "",
+      images: null
     },
-
     mode: "all",
   });
 
@@ -65,9 +38,36 @@ export default function AddCar() {
   });
 
   // @ts-expect-error: fix later
-  function onSubmit  (data)  {
-    console.log('first')
-    console.log(data);
+  async function onSubmit(data) {
+    const thumbnailRef = ref(storage, `cars/${data.thumbnail[0].name}`);
+
+    await uploadBytes(thumbnailRef, data.thumbnail[0]);
+    // const thumbnailUrl = await getDownloadURL(thumbnailRef);
+    
+    const images = []
+    if (data.images?.length > 0) {
+      if (data.images?.length > 5) {
+        toast({
+          severity: "warn",
+          summary: "Warning",
+          detail: "The maximum number of images is 5",
+          life: 3000,
+        });
+        return
+      }
+
+      
+
+    for (let i = 0; i < data.images.length; i++) {
+      const imageRef = ref(storage, `cars/images/${data.images[i].name}`);
+      await uploadBytes(imageRef, data.images[i]);
+      const imageUrl = await getDownloadURL(imageRef);
+
+      images.push(imageUrl);
+    }
+
+    }
+
     toast({
       severity: "success",
       summary: "Success",
@@ -76,57 +76,33 @@ export default function AddCar() {
     });
   }
 
+
   return (
     <div className="p12">
       <Header title="Add Car" />
       <form
-        className="grid grid-cols-8 gap-8"
+        onSubmit={handleSubmit(onSubmit)}
+        className="grid grid-cols-8 gap-8 max-lg:grid-cols-1"
       >
-        {/* <Card className="aspect-square border shadow-none col-span-3">
-          <div className="flex flex-col gap-2 h-full">
-            <label className="font-bold" htmlFor="thumbnail">
-              Thumbnail
+        <Card className="aspect-square border shadow-none col-span-2 max-lg:col-span-1 relative">
+          <div className="flex flex-col  w-full gap-2 h-full absolute top-0 left-0 p-4">
+            <label className="flex flex-col text-center gap-4 text-#4338ca  cursor-pointer items-center justify-center w-full h-full  border rounded-4" htmlFor="thumbnail">
+              <i className="i-tabler-cloud-upload text-10"></i>
+              <p className="font-bold text-6">Upload Thumbnail</p>
             </label>
-            <Controller
-              control={.control}
-              rules={{
-                required: true,
-              }}
-              render={({ field }) => (
-                <FileUpload
-                  pt={{
-                    input: { className: "w-full h-full" },
-                  }}
-                  {...field}
-                  id="thumbnail"
-                  accept="image/*"
-                  maxFileSize={4000000}
-                  headerTemplate={UploadHeaderTemplate}
-                  chooseOptions={chooseOptions}
-                  uploadOptions={uploadOptions}
-                  cancelOptions={cancelOptions}
-                  contentStyle={{ minHeight: "100%" }}
-                  emptyTemplate={
-                    <div className="h-full flex flex-col justify-center items-center gap-6">
-                      <i className="i-tabler-cloud-upload text-25"></i>
-                      <p className="m-0">
-                        Drag and drop file to here to upload.
-                      </p>
-                      <p className="m-0">
-                        You can only upload one image as the Thumbnail.
-                      </p>
-                    </div>
-                  }
-                />
-              )}
-              name="thumbnail"
+            <input
+            className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-foreground file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+              type="file"
+              id="thumbnail"
+              accept="image/png, image/jpeg"
+              {...register("thumbnail")}
             />
           </div>
-        </Card> */}
+        </Card>
 
-        <div className="col-span-5 flex flex-col gap-6">
+        <div className="col-span-6 flex flex-col gap-6 max-lg:col-span-1">
           <Card className="w-full shadow-none border">
-            <div className="grid grid-cols-2 gap-8">
+            <div className="grid grid-cols-2 gap-8 max-lg:grid-cols-1">
               <div className="flex flex-col gap-2 ">
                 <label className="font-bold" htmlFor="title">
                   Title
@@ -154,7 +130,7 @@ export default function AddCar() {
                   name="title"
                 />
               </div>
-              {/* <div className="flex flex-col gap-2 ">
+              <div className="flex flex-col gap-2 ">
                 <label className="font-bold" htmlFor="description">
                   Description
                 </label>
@@ -180,8 +156,8 @@ export default function AddCar() {
                   )}
                   name="description"
                 />
-              </div> */}
-              {/* <div className="flex flex-col gap-2 ">
+              </div>
+              <div className="flex flex-col gap-2 ">
                 <label className="font-bold" htmlFor="category">
                   Company
                 </label>
@@ -218,10 +194,10 @@ export default function AddCar() {
                     min: 1,
                     max: 10000,
                   }}
-                  render={({ fieldState,field }) => (
+                  render={({ fieldState, field }) => (
                     <>
                       <InputNumber
-                       ref={field.ref} value={field.value} onBlur={field.onBlur} onValueChange={(e) => field.onChange(e)}
+                        ref={field.ref} value={field.value} onBlur={field.onBlur} onValueChange={(e) => field.onChange(e)}
                         className={classNames({
                           "p-invalid": fieldState.error,
                         })}
@@ -234,49 +210,48 @@ export default function AddCar() {
                   )}
                   name="price"
                 />
-              </div> */}
+              </div>
             </div>
           </Card>
-          {/* <Card className="w-full shadow-none border">
-            <div className="flex flex-col gap-2 mt-6">
-              <label className="font-bold" htmlFor="images">
-                Other Images
-              </label>
-              <Controller
-                control={control}
-                rules={{
-                  required: true,
-                }}
-                render={({ field }) => (
-                  <FileUpload
-                    {...field}
-                    id="mainImage"
-                    multiple
-                    accept="image/*"
-                    maxFileSize={1000000}
-                    emptyTemplate={
-                      <p className="m-0">
-                        Drag and drop files to here to upload.
-                      </p>
-                    }
-                  />
-                )}
-                name="images"
+          <Card className="w-full shadow-none borde relative h-full min-h-80">
+            <div className="flex flex-col gap-2 absolute top-0 left-0 p-4 h-full w-full">
+            <label className="flex flex-col gap-4 p-6 text-#4338ca  cursor-pointer items-center justify-center w-full h-full  border rounded-4" htmlFor="thumbnail">
+              <i className="i-tabler-cloud-upload text-10"></i>
+             <div className="flex flex-col gap-1 justify-center text-center">
+             <p className="font-bold text-6">Upload More Images</p>
+             <p className="text-gray">Maximum of 5 Images</p>
+             </div>
+            </label>
+
+              <input
+                {...register("images")}
+                multiple
+                type="file"
+                accept="image/*"
+                id="images"
+                className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm shadow-sm transition-colors file:border-0 file:bg-transparent file:text-foreground file:text-sm file:font-medium placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-1 focus-visible:ring-ring disabled:cursor-not-allowed disabled:opacity-50"
+
               />
+
             </div>
-          </Card> */}
-
-
-        </div>
-      </form>
-      <div className="flex gap-4 justify-end items-center">
+          </Card>
+          <div className="flex gap-4 justify-end items-center max-lg:flex-col-reverse max-lg:gap-2 w-full">
+          
             <Button
-              className="mt-6"
+             className="max-lg:w-full"
+            outlined
               label="Cancel"
               onClick={() => navigate(-1)}
             />
-            <Button className="mt-6" label="Submit" onClick={()=>{onSubmit("hello")}} />
+            <Button className="max-lg:w-full" label="Submit" type="submit" />
+            
           </div>
+
+        </div>
+
+      </form>
+
     </div>
   );
 }
+
