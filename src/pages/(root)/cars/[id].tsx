@@ -9,12 +9,15 @@ import { Image } from "primereact/image";
 import { Rating } from "primereact/rating";
 import { Button } from "primereact/button";
 import { toggleBookmark, useUserStore } from "../../../stores/user";
+import Chat from "../../../components/Chat";
+import { useState } from "react";
 
 
 export default function Car() {
   const { id } = useParams();
   const { toast } = useOutletContext<Boxes>()
   const userStore = useUserStore();
+  const [visible , setVisible]=useState(false);
   
   const { isPending, data } = useQuery({
     queryKey: ["car", id],
@@ -32,6 +35,7 @@ export default function Car() {
 
   return (
     <div className="p12">
+      <Chat visible={visible} setVisible={setVisible}/>
       <Header title="Car Details" />
       <div className="grid grid-cols-8 max-xl:grid-cols-6 gap-8 max-lg:grid-cols-4 max-sm:grid-cols-1">
         <div className="col-span-5 flex flex-col gap-6 max-xl:col-span-4 max-lg:col-span-2 max-sm:col-span-1">
@@ -87,7 +91,9 @@ export default function Car() {
             </Card>
           </div>
           <div className="flex flex-col gap-4">
-            <Button label="Book Now" />
+            <Button label="Book Now"
+            onClick={()=>setVisible(true)}
+            />
 
             <div className="flex justify-center gap-4">
             <Button
