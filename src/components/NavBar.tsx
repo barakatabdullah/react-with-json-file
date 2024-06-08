@@ -41,7 +41,7 @@ export default function NavBar() {
             </div>
             <Link to="/">
               <Avatar
-                className="w-full h-full aspect-square object-contain rounded-3 overflow-hidden"
+                className="w-full h-full aspect-square object-contain rounded-2 overflow-hidden"
                 image="/photos/profile.png"
               />
             </Link>

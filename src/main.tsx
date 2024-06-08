@@ -13,6 +13,7 @@ import { queryClient } from "./config/queryClient";
 //generouted react router
 import { Routes } from "@generouted/react-router";
 
+
 export function Fallback() {
   return <p>Performing initial daReactDOM.createR</p>;
 }

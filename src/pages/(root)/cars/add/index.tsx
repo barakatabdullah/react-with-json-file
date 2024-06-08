@@ -86,7 +86,7 @@ export default function AddCar() {
       >
         <Card className="aspect-square border shadow-none col-span-2 max-lg:col-span-1 relative">
           <div className="flex flex-col  w-full gap-2 h-full absolute top-0 left-0 p-4">
-            <label className="flex flex-col text-center gap-4 text-#4338ca  cursor-pointer items-center justify-center w-full h-full  border rounded-4" htmlFor="thumbnail">
+            <label className="flex flex-col text-center gap-4 text-#4338ca  cursor-pointer items-center justify-center w-full h-full  border rounded-2" htmlFor="thumbnail">
               <i className="i-tabler-cloud-upload text-10"></i>
               <p className="font-bold text-6">Upload Thumbnail</p>
             </label>
@@ -215,7 +215,7 @@ export default function AddCar() {
           </Card>
           <Card className="w-full shadow-none borde relative h-full min-h-80">
             <div className="flex flex-col gap-2 absolute top-0 left-0 p-4 h-full w-full">
-            <label className="flex flex-col gap-4 p-6 text-#4338ca  cursor-pointer items-center justify-center w-full h-full  border rounded-4" htmlFor="thumbnail">
+            <label className="flex flex-col gap-4 p-6 text-#4338ca  cursor-pointer items-center justify-center w-full h-full  border rounded-2" htmlFor="thumbnail">
               <i className="i-tabler-cloud-upload text-10"></i>
              <div className="flex flex-col gap-1 justify-center text-center">
              <p className="font-bold text-6">Upload More Images</p>

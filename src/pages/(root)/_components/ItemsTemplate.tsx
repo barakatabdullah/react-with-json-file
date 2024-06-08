@@ -11,7 +11,7 @@ export function ItemTemplate(car) {
   const { toast } = useOutletContext<Boxes>();
 
   const cardHeader = (car: Car) => (
-    <div className="overflow-hidden rounded-2xl top-0 flex flex-col relative h-60">
+    <div className="overflow-hidden rounded-2 top-0 flex flex-col relative h-60">
       <Button
         className="absolute top-3 right-3 z-10"
 pt={{
@@ -63,7 +63,7 @@ pt={{
       }
       footer={cardFooter(car)}
       key={car.id}
-      className="rounded-2xl "
+      className="rounded-2 "
       pt={{
         root: { className: "shadow-none! border" },
         title: { className: "h-20  break-words" },

@@ -15,7 +15,7 @@ export default function Bookmarks() {
           value={userStore.bookmarks}
           layout="grid"
           pt={{
-            root: { className: "rounded-4 overflow-hidden border" },
+            root: { className: "rounded-2 overflow-hidden border" },
             content: { className: "p4" },
             grid: {
               className:

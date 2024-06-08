@@ -46,7 +46,7 @@ export default function Home() {
         </div>
 
         <div className="col-span-2 flex flex-col gap-4">
-          <div className="col-span-4 flex items-center h-full w-full h-60 bg-#4338ca rounded-4 p-6 relative">
+          <div className="col-span-4 flex items-center h-full w-full h-60 bg-#4338ca rounded-2 p-6 relative">
             <h4 className="text-8 text-start text-white font-bold max-sm:text-6">
               Your journey
               <br />
@@ -81,7 +81,7 @@ export default function Home() {
           loading={isLoading}
           layout="grid"
           pt={{
-            root: { className: "rounded-6  " },
+            root: { className: "rounded-3  " },
             content: { className: " bg-transparent" },
             grid: {
               className:

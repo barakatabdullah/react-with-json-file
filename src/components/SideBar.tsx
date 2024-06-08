@@ -15,7 +15,7 @@ export default function SideBar() {
         <NavMenu/>
         <div className="pb-10 w-14">
           <Link to="/">
-            <Avatar className="w-full h-full aspect-square object-contain rounded-4 overflow-hidden" image="/photos/profile.png"  />
+            <Avatar className="w-full h-full aspect-square object-contain rounded-2 overflow-hidden" image="/photos/profile.png"  />
           </Link>
         </div>
       </div>

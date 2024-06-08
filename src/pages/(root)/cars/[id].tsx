@@ -39,7 +39,7 @@ export default function Car() {
       <Header title="Car Details" />
       <div className="grid grid-cols-8 max-xl:grid-cols-6 gap-8 max-lg:grid-cols-4 max-sm:grid-cols-1">
         <div className="col-span-5 flex flex-col gap-6 max-xl:col-span-4 max-lg:col-span-2 max-sm:col-span-1">
-          <div className="rounded-4 overflow-hidden">
+          <div className="rounded-2 overflow-hidden">
             <img
               className="w-full h-full object-cover"
               src={data?.thumbnail}
@@ -48,7 +48,7 @@ export default function Car() {
           </div>
           <div className="grid grid-cols-3 gap2 max-sm:grid-cols-5">
             {data.images?.map((image: string, index: number) => (
-              <div key={index} className="rounded-4 overflow-hidden">
+              <div key={index} className="rounded-2 overflow-hidden">
                 <Image
                   preview
                   className="w-full h-full "

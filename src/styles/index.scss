@@ -1,9 +1,13 @@
 @import "@unocss/reset/tailwind.css" layer(tailwind-reset);
 /* IMPORTANT: In "styled" mode you must add the PrimeReact Theme here. Do NOT include in "unstyled" mode */
-@import "./primereact-sass-theme/themes/lara/lara-light/indigo/theme.scss"
+@import "primereact/resources/themes/lara-light-indigo/theme.css"
   layer(primereact);
 
 @import "@fontsource-variable/red-hat-display";
+
+:root{
+  --border-radius: 0.9rem;
+}
 
 html {
   scroll-behavior: smooth;
