@@ -49,7 +49,7 @@ And you will see the generated file in `dist` that ready to be served.
 
 
 
-Project Structure
+## Project Structure
 
 ```bash
 
