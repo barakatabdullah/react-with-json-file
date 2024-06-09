@@ -6,8 +6,19 @@ React: Popular JavaScript library for building user interfaces.
 
 TypeScript: Superset of JavaScript for static type checking.
 
+
+## Screenshots
 <p align='center'>
   <img src='./screenshots/Screenshot 2024-06-09 174644.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
+</p>
+
+
+<p align='center'>
+  <img src='./screenshots/Screenshot 2024-06-09 174701.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
+</p>
+
+<p align='center'>
+  <img src='./screenshots/Screenshot 2024-06-09 174718.png' alt='Vitesse - Opinionated Vite Starter Template' width='600'/>
 </p>
 
 
